@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Chicken Invaders</string>
+    <string name="home_play">▶</string>
+    <string name="home_trophy">🏆</string>
+    <string name="high_scores_title">Scores</string>
+    <string name="high_scores_parent_title">High Scores</string>
+    <string name="item_rank_prefix">rank </string>
+    <string name="item_score_prefix">score </string>
+    <string name="game_over">Game Over!</string>
+    <string name="try_again">Try Again ▶</string>
+    <string name="home">Home</string>
+</resources>

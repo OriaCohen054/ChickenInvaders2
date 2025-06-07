@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootFrame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+
+
+    <LinearLayout
+        android:id="@+id/powerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="left"
+        android:padding="0dp">
+
+        <!-- דוגמא: 3 לבבות, תוכלי לשכפל/להסיר לפי כמחצית -->
+
+        <TextView
+            android:id="@+id/scoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginTop="7dp"/>
+
+        <ImageView
+            android:id="@+id/power"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/chicken"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/odometerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginStart="130dp"
+        android:padding="0dp">
+
+        <!-- דוגמא: 3 לבבות, תוכלי לשכפל/להסיר לפי כמחצית -->
+
+        <TextView
+            android:id="@+id/odometerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="7dp"/>
+
+        <ImageView
+            android:id="@+id/odometer"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/odometer"
+            android:layout_marginTop="2dp"
+            />
+    </LinearLayout>
+
+
+    <!-- 1. שורת הלבבות בראש המסך -->
+    <LinearLayout
+        android:id="@+id/livesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:padding="8dp">
+
+        <!-- דוגמא: 3 לבבות, תוכלי לשכפל/להסיר לפי כמחצית -->
+        <ImageView
+            android:id="@+id/heart1"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/heart"
+            />
+
+        <ImageView
+            android:id="@+id/heart2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/heart"
+            android:layout_marginStart="8dp"
+            />
+
+        <ImageView
+            android:id="@+id/heart3"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/heart"
+            android:layout_marginStart="8dp"
+            />
+
+    </LinearLayout>
+    <!-- 3. GridLayout של התרנגולות (מתחיל מהשורה השלישית) -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="96dp"
+    android:rowCount="11"
+    android:columnCount="5">
+
+    <!-- אנחנו לא מגדירים כאן יישומים קבועים ב־XML;
+         GameFragment בקוד הדינמי יוסיף/ישבץ ImageView בכל תא לפי הצורך.
+         עם זאת חשוב שכל ImageView של תרנגולת יקבל LayoutParams מתאימים:
+         למשל: layout_width="0dp" , layout_columnWeight="1" , layout_height="48dp". -->
+</GridLayout>
+
+    <!-- 4. שורת החללית בתחתית המסך (5 משבצות שוות) -->
+<LinearLayout
+android:id="@+id/bottomRow"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:layout_gravity="bottom"
+android:padding="8dp">
+
+<ImageView
+    android:id="@+id/slot0"
+    android:layout_width="0dp"
+    android:layout_height="150dp"
+    android:layout_weight="1"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    android:visibility="invisible" />
+
+<ImageView
+    android:id="@+id/slot1"
+    android:layout_width="0dp"
+    android:layout_height="150dp"
+    android:layout_weight="1"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    android:visibility="invisible" />
+
+<ImageView
+    android:id="@+id/slot2"
+    android:layout_width="0dp"
+    android:layout_height="150dp"
+    android:layout_weight="1"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    android:visibility="invisible" />
+
+<ImageView
+    android:id="@+id/slot3"
+    android:layout_width="0dp"
+    android:layout_height="150dp"
+    android:layout_weight="1"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    android:visibility="invisible" />
+
+<ImageView
+    android:id="@+id/slot4"
+    android:layout_width="0dp"
+    android:layout_height="150dp"
+    android:layout_weight="1"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    android:visibility="invisible" />
+</LinearLayout>
+
+    </FrameLayout>
